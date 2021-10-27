@@ -1,0 +1,75 @@
+INSERT INTO landlords(id, role_id,
+                  line_id, account, password,
+                  chinese_name, english_name,
+                  email, birthday, identity_card,
+                  gender, address, phone, cellphone,
+                  verified,
+                  agree_personal_information)
+
+VALUES (CONVERT(uniqueidentifier, '2d715366-fb97-4e85-adc8-210886710b17'),
+        CONVERT(uniqueidentifier, 'a066e927-acf1-408b-a711-9dc2dc630e36'),
+        'U87f0de3d0487a9173fefdb44db6168f3',
+        'landlord_account', '$2y$10$8Vg6fn3xw.WFPQaQuVX17u6jgw08ucUy69e5XrI8QeAqXlOqUbK8.',
+        N'房東', 'landlord', 'landlord@example.com', '1997-01-02', 'X123456789', N'男',
+        N'台北市', '02-12345678#123', '0912-345-678',
+        1 , 1),
+
+        (CONVERT(uniqueidentifier, '4ba6cb1e-96f8-4fc8-9f6c-0ecee7b206fe'),
+        CONVERT(uniqueidentifier, 'a066e927-acf1-408b-a711-9dc2dc630e36'),
+        'real_line_id',
+        'real_landlord_account', '$2y$10$8Vg6fn3xw.WFPQaQuVX17u6jgw08ucUy69e5XrI8QeAqXlOqUbK8.',
+        N'吳秀英', 'landlord', 'reallandlord@example.com', '1997-01-02', 'X987654321', N'女',
+        N'台北市', '02-12345678', '0912-345-678',
+        1 , 1),
+
+       (CONVERT(uniqueidentifier, '700718f1-1642-44ce-9ab0-1fb7132143e8'),
+        CONVERT(uniqueidentifier, 'a066e927-acf1-408b-a711-9dc2dc630e36'),
+        'eden_line_id',
+        'eden_landlord_account', '$2y$10$8Vg6fn3xw.WFPQaQuVX17u6jgw08ucUy69e5XrI8QeAqXlOqUbK8.',
+        N'伊甸房東', 'landlord', 'edenlandlord@example.com', '1997-01-02', 'X246780809', N'男',
+        N'台北市', '02-12345678', '0912-345-678',
+        1 , 1),
+
+       (CONVERT(uniqueidentifier, 'b67cf844-891a-48b0-b8ba-67f1195ade31'),
+        CONVERT(uniqueidentifier, 'a066e927-acf1-408b-a711-9dc2dc630e36'),
+        'U56df696313ac84bb6d357e9e1ed6b725',
+        'landlord_wind', '$2a$10$yfZBz.WJOyDBGrq8CIUnsukirk4mZnnSn6VEjsD.yK8lddJ4igeXi',
+        N'房東小峰', 'wind', 'example@mail.com', '1997-01-01', 'H123456789', N'男',
+        N'台北市', '02-12345678', '0912-345-678',
+        1 , 1),
+
+       (CONVERT(uniqueidentifier, '7d9fbcf2-1329-40e3-a975-26dc4652d30c'),
+        CONVERT(uniqueidentifier, 'a066e927-acf1-408b-a711-9dc2dc630e36'),
+        'line_id_chao',
+        'landlord_chao', '$2a$10$JrSRF/GSfvdKhXkvORybJObLKPstq7SZhQmkD6RgFAgpOB61SA.R6',
+        N'房東小趙', 'chao', 'sfianchao@yahoo.com.tw', '1997-01-01', 'F129282171', N'男',
+        N'新竹市', '02-12345678', '0912-345-678',
+        1 , 1),
+
+       (CONVERT(uniqueidentifier, 'd941f8d9-503f-4bde-802b-948e5da51501'),
+        CONVERT(uniqueidentifier, 'a066e927-acf1-408b-a711-9dc2dc630e36'),
+        'U952553d5c67f02ff49952eff4e5a9fc4',
+        'landlord_wang', '$2a$10$AA6JZuYW24xxdag3wD2yHu/u0iYwIZ7CwGenJhpJ6CBBf8av4ogdO',
+        N'房東小汪', 'wang', 'm10909117@mail.ntust.edu.tw', '1997-01-01', 'F123456789', N'男',
+        N'新北市', '02-12345678', '0912-345-678',
+        1 , 1),
+
+--       (CONVERT(uniqueidentifier, 'c4cc4b92-7a6a-49f8-8638-ef6b11943d42'),
+--        CONVERT(uniqueidentifier, 'a066e927-acf1-408b-a711-9dc2dc630e36'),
+--        'Ub7ee98109bc52fb3afa74b3d3e4afbad',
+--        'landlord_leo', '$2a$10$8dyi/lHUXqTC1ISLrKdbG./gKoDqHN41TEHuV2LnuttqQRH/iJLY2',
+--        N'房東小威', 'leo', 'm10909101@mail.ntust.edu.tw', '1997-01-01', 'C123456789', 'male',
+--        N'基隆市', '0212345678', '0912345678',
+--        1 , 1),
+
+       (CONVERT(uniqueidentifier, 'e1eb5a73-19b3-4d5d-85f3-f1d19ff1b154'),
+        CONVERT(uniqueidentifier, 'a066e927-acf1-408b-a711-9dc2dc630e36'),
+        'line_id_test',
+        'landlord_ru', '$2a$10$8dyi/lHUXqTC1ISLrKdbG./gKoDqHN41TEHuV2LnuttqQRH/iJLY2',
+        N'房東小茹', 'ru', 'm10809101@mail.ntust.edu.tw', '1997-01-01', 'Z123456789', N'女',
+        N'台北市', '02-12345678', '0912-345-678',
+        1 , 1)
+
+
+
+

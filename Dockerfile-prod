@@ -1,0 +1,11 @@
+FROM maven:3.6.3-openjdk-11-slim AS MAVEN_BUILD
+COPY pom.xml /build/
+COPY src /build/src/
+WORKDIR /build
+RUN mvn package
+
+FROM adoptopenjdk/openjdk11:slim
+WORKDIR /app
+COPY storage /app/storage/
+COPY --from=MAVEN_BUILD /build/target/love-station-1.0.jar /app/
+ENTRYPOINT ["java", "-jar", "-Dspring.profiles.active=prod", "love-station-1.0.jar"]

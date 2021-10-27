@@ -1,0 +1,38 @@
+version: '3.4'
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlserver
+    restart: always
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: 'LoveStation123!'
+      TZ: 'Asia/Taipei'
+    ports:
+      - 1433:1433
+
+  redis:
+    image: redis:alpine
+    container_name: redis
+    restart: always
+    ports:
+      - 6379:6379
+
+  love-station-api:
+    build:
+      context: ./
+      dockerfile: Dockerfile-prod
+    image: love-station-api-dev:latest
+    container_name: love-station-api-dev
+    restart: always
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:sqlserver://sqlserver;databaseName=ehome_db
+      - SPRING_REDIS_HOST=redis
+      - TZ=Asia/Taipei
+    volumes:
+      - ./storage:/app/storage
+    depends_on:
+      - redis
+      - sqlserver
+    ports:
+      - 8080:8080

@@ -1,0 +1,27 @@
+package org.eden.lovestation.dto.projection;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.beans.factory.annotation.Value;
+
+import java.util.Date;
+
+public interface CheckinApplicationWithRoomStateChangeInfoAdminNeed {
+
+    String getCheckinAppId();
+
+    String getReferralName();
+
+    String getReferralEmployeeName();
+
+    String getReferralEmployeeTitle();
+
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone="Asia/Taipei")
+    Date getRoomStateChangeDate();
+
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone="Asia/Taipei")
+    Date getNewStartDate();
+
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone="Asia/Taipei")
+    Date getNewEndDate();
+
+}
